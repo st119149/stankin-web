@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<% const entites = data.map(item => Object.entries(item)) %>
+<% for (let i = 0; i < entites.length; i++) { %>
+<% for (let j = 0; j < entites[i].length; j++) { %>
+<%= entites[i][j][0] %>
+<%= entites[i][j][1] %>
+<br>
+<%}%>
+<hr>
+<%}%>
+</body>
+</html>

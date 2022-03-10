@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Авторизация</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+</head>
+<body>
+<div class="container">
+    <form method="post">
+        <div class="input">
+            <input type="text" placeholder="login" name="login" required/>
+        </div>
+        <div class="input">
+            <% if (!isWrong) { %>
+                <input type="password" placeholder="password" name="password" required/>
+            <% } else { %>
+                <input type="password" class="wrong" placeholder="password" name="password" required/>
+            <% } %>
+        </div>
+        <button id="button">Log in</button>
+    </form>
+
+</div>
+
+</body>
+</html>
