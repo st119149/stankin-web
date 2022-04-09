@@ -1,14 +1,14 @@
 const axios = require('axios');
-const express = require('express');
+const express1 = require('express');
 const bodyParser = require('body-parser');
 const SHA1 = require('sha1');
 const cookieParser = require('cookie-parser')
 
-const app = express();
+const app = express1();
 app.set('views', './static')
 app.set('view engine', 'ejs')
 app.use(bodyParser.urlencoded({extended: false}))
-app.use(express.static(__dirname + '/static'));
+app.use(express1.static(__dirname + '/static'));
 const host = '127.0.0.1';
 const port = 8080;
 
