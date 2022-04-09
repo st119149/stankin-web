@@ -17,6 +17,7 @@ const store = {
     data: null
 }
 
+console.log('1')
 
 const authorize = (login, password) => axios({
     url: 'https://helloworldprojectt.herokuapp.com/v1/authorization',
