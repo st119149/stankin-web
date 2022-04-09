@@ -10,12 +10,13 @@ app.set('view engine', 'ejs')
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(express.static(__dirname + '/static'));
 const host = '127.0.0.1';
-const port = 7000;
+const port = 8080;
 
 const store = {
     isLogin: false,
     data: null
 }
+
 
 const authorize = (login, password) => axios({
     url: 'https://helloworldprojectt.herokuapp.com/v1/authorization',
@@ -25,6 +26,7 @@ const authorize = (login, password) => axios({
         password: SHA1(password)
     }
 })
+
 
 const fetchCars = (token) => axios({
     url: 'https://helloworldprojectt.herokuapp.com/v1/cars',
@@ -36,10 +38,10 @@ const fetchCars = (token) => axios({
 })
 
 app.get('/login', (req, res) => {
-    if (store.isLogin) {
-        res.redirect('/');
-        return;
-    }
+    // if (store.isLogin) {
+    //     res.redirect('/');
+    //     return;
+    // }
     res.render(`login`, {isWrong: false})
 });
 
